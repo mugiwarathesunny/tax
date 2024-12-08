@@ -2,7 +2,6 @@ package com.dufana.berlin.toluakindolie.tax.service;
 
 import com.dufana.berlin.toluakindolie.tax.entity.TaxBracket;
 import com.dufana.berlin.toluakindolie.tax.repository.TaxBracketRepository;
-import org.aspectj.lang.annotation.Before;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
@@ -30,7 +29,7 @@ class TaxCalculationServiceTest {
                 new TaxBracket(3L, 20000, Double.MAX_VALUE, 0.3)
         ));
         double tax = taxCalculationService.calculateTax(2500);
-        assertEquals(4500.0, tax, 0.01);
+        assertEquals(250.0, tax, 0.01);
 
         System.out.println("Calculated Tax: " + tax);
     }
